@@ -1,7 +1,8 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Артём Ильченко](https://up.htmlacademy.ru/adaptive/13/user/375383).
-* Наставник: `Неизвестно`.
+* Наставник: [Владислав Балабанович]
+(https://htmlacademy.ru/profile/balabanovich).
 
 ---
 
