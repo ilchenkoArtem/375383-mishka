@@ -1,14 +1,15 @@
 .our-products {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     flex-direction: column;
     .size(320px;
     510px);
     box-sizing: border-box;
-    background-image: url(../img/hero-mobile@1x.jpg);
+    background-image: url(../img/hero-mobile@1x3.jpg);
+    background-position: top center;
     background-repeat: no-repeat;
     background-color: #fafafa;
+    background-size: 140%;
     text-align: center;
     padding-top: 76px;
 }
@@ -24,6 +25,10 @@
 }
 
 .our-products__type-goods {
+    position: relative;
+    bottom:0;
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -79,4 +84,19 @@
 .our-products__type-goods--toys svg {
     position: relative;
     right: -10px;
+}
+
+@media (min-width: @width-table){
+    .our-products{
+        width: 100%;
+        height: 745px;
+    }
+    .our-products__type-goods{
+        flex-direction: row;
+        align-items: flex-end;
+    }
+    .our-products__type-goods a{
+        width: 100%;
+    }
+        
 }
