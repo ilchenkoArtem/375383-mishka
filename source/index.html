@@ -12,34 +12,44 @@
 
 <body class="body">
     <header class="page-header">
-        <div class="page-header__logo">
-            <img src="img/logo-mobile.svg" alt="Логотип Мишка" class="page-header__logo-image" width="86" height="35">
-        </div>
         <nav class="header-nav">
-            <button class="header-nav__button"></button>
             <div class="header-nav__wrapper-lists">
+                <div class="header-nav__logo">
+                    <button class="header-nav__button"></button>
+                    <img src="img/logo-mobile.svg" alt="Логотип Мишка" class="page-header__logo-image" width="86" height="35">
+                </div>
                 <div class="header-nav__wrapper-bottom">
-                    <ul class="header-nav__list header-nav__item--catalog">
+                    <ul class="header-nav__list header-nav__item--main-menu">
                         <li class="header-nav__item">
                             <a href="catalog.html">Каталог товаров</a>
                         </li>
-                    </ul>
-                    <ul class="header-nav__list">
-                        <li class="header-nav__item header-nav__item--order">
+                        <li class="header-nav__item">
                             <a href="#">Вязание на заказ</a>
                         </li>
                     </ul>
+                    <ul class="header-nav__list header-nav__item--extra-menu">
+                        <li class="header-nav__item">
+                            <a href="#">Новые поступления</a>
+                        </li>
+                        <li class="header-nav__item">
+                            <a href="#">Распродажа</a>
+                        </li>
+                    </ul>
+
                 </div>
-                <ul class="header-nav__list">
-                    <li class="header-nav__item header-nav__item--search">
-                        <a href="#">Поиск по сайту</a>
-                    </li>
-                </ul>
-                <ul class="header-nav__list">
-                    <li class="header-nav__item header-nav__item-basket">
-                        <a href="#">Корзина: пока пуста</a>
-                    </li>
-                </ul>
+                <div class="header-nav__container">
+                    <ul class="header-nav__list">
+                        <li class="header-nav__item header-nav__item--search">
+                            <a href="#"><span>Поиск по сайту</span></a>
+                        </li>
+                    </ul>
+                    <ul class="header-nav__list">
+                        <li class="header-nav__item header-nav__item--basket">
+                            <a href="#">Корзина: пока пуста</a>
+                        </li>
+                    </ul>
+                </div>
+                <p class="header-nav__list header-nav__list-delivery">Бесплатная доставка по России</p>
             </div>
         </nav>
     </header>

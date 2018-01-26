@@ -1,26 +1,19 @@
 .page-header {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 79px;
-    padding: 0 30px;
-    background-color: #ffffff;
-    box-sizing: border-box;
-    border-bottom: @border;
-    margin-bottom: 323px;
-    &__logo{
-        display: flex;
-        justify-content: center;
+}
+
+@media (min-width: @width-table) {
+    .page-header {
+        min-width: 320px;
+        padding: 0 50px;
+        box-sizing: border-box;
     }
 }
 
-@media (min-width: @width-table){
-    .page-header{
-        justify-content: space-between;
-        height: 88px;
-        padding: 0 50px;
-        width: 768px;
-        margin-bottom: 0;
+@media (min-width: @width-desctop) {
+    .page-header {
+        max-width: 1150px;
+        box-sizing: border-box;
+        margin: 0 auto;
     }
 }
