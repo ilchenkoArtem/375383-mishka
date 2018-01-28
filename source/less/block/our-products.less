@@ -2,14 +2,14 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    .size(320px;
-    510px);
+    .size(100%;
+    488px);
     box-sizing: border-box;
     background-image: url(../img/hero-mobile@1x3.jpg);
-    background-position: top center;
+    background-position: center -16%;
     background-repeat: no-repeat;
     background-color: #fafafa;
-    background-size: 140%;
+    background-size: auto;
     text-align: center;
     padding-top: 76px;
 }
@@ -20,19 +20,18 @@
     30px;
     bold);
     width: 260px;
-    
-
+    margin-top: -6px;
 }
 
 .our-products__type-goods {
     position: relative;
-    bottom:0;
+    bottom: 0;
     height: 100%;
     width: 100%;
+    max-width: 1150px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding: 0;
     list-style: none;
 
     &--interior {
@@ -53,7 +52,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 30px;
-    .size(320px;
+    .size(100%;
     103px);
     .font(19px;
     24px;
@@ -62,6 +61,7 @@
     color: #fff;
     text-decoration: none;
     transition: all 0.3s ease;
+    padding-top: 23px;
 }
 
 .our-products__type-goods a:hover {
@@ -79,6 +79,8 @@
     transition: all 0.3s ease;
     fill: #149080;
     opacity: 0.5;
+    margin-right: 6px;
+    margin-top: 9px;
 }
 
 .our-products__type-goods--toys svg {
@@ -86,17 +88,28 @@
     right: -10px;
 }
 
-@media (min-width: @width-table){
-    .our-products{
-        width: 100%;
-        height: 745px;
+@media (min-width: @width-table) {
+    .our-products {
+        height: 728px;
+        background-position: center 8%;
+        background-size: 150%;
+        padding: 0 50px;
     }
-    .our-products__type-goods{
+    .our-products__type-goods {
         flex-direction: row;
         align-items: flex-end;
+
     }
-    .our-products__type-goods a{
+    .our-products__type-goods a {
         width: 100%;
     }
-        
+
+    .our-products h1 {
+        .caption;
+        .font(43px;
+        50px;
+        bold);
+        width: 668px;
+        margin-top: 76px;
+    }
 }

@@ -1,23 +1,130 @@
-.best-selling-goods{
-    max-width: 320px;
-    padding: 30px;
+.best-selling-goods {
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
     box-sizing: border-box;
 }
-.best-selling-goods h2{
+
+.best-selling-goods h2 {
     .caption;
 }
 
-.best-selling-goods b{
-    .font(17px; 20px; bold);
+.best-selling-goods b {
+    .font(17px;
+    20px;
+    bold);
     text-transform: uppercase;
+}
+
+.best-selling-goods__options {
+    display: flex;
+    width: 100%;
+}
+
+.best-selling-goods__options ul {
+    padding: 0;
+    list-style: none;
+
+}
+
+.best-selling-goods__options li {
+    border-bottom: @border;
+}
+
+.best-selling-goods__options-names li {
+    width: 100px;
+}
+
+.best-selling-goods__options-value {
+    width: 100%;
+}
+
+.best-selling-goods__container-name > b {
     color: @main-color;
 }
 
-b.best-selling-goods__price{
-    color: @base-color-text;
+.best-selling-goods__main-info {
+    display: flex;
+    flex-direction: column;
 }
 
-.best-selling-goods img{
+.best-selling-goods__goods-info {
+    order: 1;
+}
+
+.best-selling-goods__wrapper-button {
+    order: 3;
+    text-align: center;
+}
+
+.best-selling-goods__wrapper-img {
+    order: 2;
+}
+
+
+.best-selling-goods img {
     background-color: #f1f1f1;
+}
+
+@media (min-width: @width-table) {
+    .best-selling-goods {
+        .padding-table;
+        width: 100%;
+    }
+    .best-selling-goods__container-name {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+
+    }
+    .best-selling-goods__container-name b {
+        width: 72px;
+        max-width: auto;
+        text-align: center;
+    }
+
+    .best-selling-goods__goods-info {
+        padding-right:50px;
+        width: 50%;
+        order: 0;
+        box-sizing: border-box;
+    }
+
+    .best-selling-goods__wrapper-button {
+        padding-right:50px;
+        width: 50%;
+        order: 0;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .best-selling-goods__wrapper-img {
+        width: 50%;
+        order: 0;
+    }
+    
+    .best-selling-goods__wrapper-img img{
+        width: 100%;
+        height: 100%;
+        max-width: 641px;
+    }
+
+
+    .best-selling-goods__main-info {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 488px;
+        flex-wrap: wrap;
+    }
+}
+
+@media (min-width: @width-desctop) {
+    .best-selling-goods{
+        width: 1150px;
+        margin: 0 auto;
+    }
 }
 
