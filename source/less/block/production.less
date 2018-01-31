@@ -1,30 +1,122 @@
-.production{
-    padding:30px;
+.production {
+    padding: 30px;
 }
 
-.production h2{
-    .font(17px; 24px; bold);
+.production__items-wrapper h2 {
+    .font(17px;
+    24px;
+    bold);
     color: #000;
     text-align: left;
     width: 126px;
-    padding-left: 28px;
-    padding-right: 28px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 0;
+    order: 1;
+
 }
 
-.production p{
-    .font(13px; 24px;);
-    padding-left: 28px;
-    padding-right: 28px;
+.production__items-wrapper p {
+    .font(13px;
+    24px;
+    );
+    padding-left: 30px;
+    padding-right: 30px;
     margin-bottom: 0;
+    order: 3;
 }
 
-.production__button-wrapper{
-    padding-left: 28px;
-    padding-right: 28px;
-    margin: 20px auto;
+.production__items-wrapper img {
+    width: 100%;
+    height: 100%;
+    order: 2;
 }
 
-.production__items-wrapper{
+.production__button-wrapper {
+    box-sizing: border-box;
+    padding-left: 30px;
+    padding-right: 30px;
+    order: 4;
+}
+
+.production__items-wrapper {
     border: @border;
-    
+    display: flex;
+    flex-direction: column;
+
+}
+
+@media (min-width: @width-table) {
+    .production {
+        padding: 0 50px;
+        box-sizing: border-box;
+    }
+    .production__items-wrapper {
+        
+        display: flex;
+        flex-direction: column;
+    }
+
+    .production__items-wrapper img {
+        order: 1;
+    }
+    .production__items-wrapper h2 {
+        padding: 0 40px;
+        box-sizing: border-box;
+        order: 2;
+    }
+
+    .production__items-wrapper p {
+        padding: 0 40px;
+        order: 3;
+    }
+
+    .production__button-wrapper {
+        padding: 0 40px;
+        width: 100%;
+        order: 4;
+    }
+}
+
+@media (min-width: @width-desctop) {
+    .production{
+        width: 1150px;
+        margin: 0 auto;
+    }
+
+    .production__items-wrapper {
+        height: 455px;
+        box-sizing: border-box;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .production__items-wrapper picture {
+        width: 682px;
+        height: 455px;
+    }
+    .production__items-wrapper img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .production__button-wrapper {
+        width: 230px;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .production__items-wrapper p {
+        padding: 0;
+        width: 222px;
+        order: 3;
+    }
+
+    .production__items-wrapper h2 {
+        padding: 0;
+        .font(20px;
+        24px;
+        bold);
+    }
 }
