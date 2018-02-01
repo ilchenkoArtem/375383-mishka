@@ -6,13 +6,15 @@
 .contacts h2 {
     .caption;
     font-size: 18px;
-    padding: 30px;
+    padding: 0 30px;
 }
 
 .contacts__info {
     display: flex;
     flex-direction: column;
-    padding: 30px;
+    padding: 0 30px;
+    margin-bottom: 22px;
+
 
 }
 
@@ -23,11 +25,32 @@
 }
 
 .contacts__info-items li:first-of-type {
-    margin-right: 28px;
+    margin-right: 7px;
     min-width: 70px;
+
+}
+
+.contacts__email {
+    border-bottom: @border;
+    border-color: @main-color;
+}
+
+.contacts__email:hover {
+    color: @main-color;
+}
+
+.contacts__email:focus,
+.contacts__email:active {
+    color: @main-color;
+    opacity: 0.3;
+}
+
+.contacts__info-items--adress {
+    line-height: 30px;
 }
 
 .contacts__info-map {
+    position: relative;
     min-height: 457px;
     width: 100%;
     background-image: url(../img/map-mobile@1x.jpg);
@@ -35,12 +58,30 @@
     background-position: center center;
     background-size: 100%;
     margin: 0 auto;
+    margin-bottom: 10px;
+
+}
+
+.contacts__info-map::before {
+    content: "";
+    top: 32%;
+    left: 43%;
+    position: absolute;
+    width: 67px;
+    height: 100px;
+    background-image: url(../img/icon-map-pin.svg);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .contacts__button-container {
     padding: 30px;
+
 }
 
+.contacts__button {
+    letter-spacing: 1px;
+}
 
 @media (min-width: @width-table) {
     .contacts__info {
