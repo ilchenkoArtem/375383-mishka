@@ -1,36 +1,45 @@
-.font(@size; @line-heigt; @weight:400;){
+.font(@size;
+@line-heigt;
+@weight: 400;
+) {
     font-size: @size;
     line-height: @line-heigt;
     font-weight: @weight;
 }
 
-.caption(){
+.caption() {
     font-size: 25px;
     line-height: 30px;
     font-weight: 30px;
     color: #000;
 }
 
-.size(@width; @height){
+.size(@width;
+@height) {
     width: @width;
-    height: @height
+    height: @height;
 }
 
 .visually-hidden {
-	position: absolute;
-	clip: rect(1px 1px 1px 1px);
-	/* IE6, IE7 */
-	clip: rect(1px, 1px, 1px, 1px);
-	padding: 0;
-	margin: 0;
-	border: 0;
-	height: 1px;
-	width: 1px;
-	overflow: hidden;
+    position: absolute;
+    clip: rect(1px 1px 1px 1px);
+    /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    margin: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+.padding-table {
+    padding: 0 50px;
 }
 
 @base-color-text: #444444;
-@main-color:#63d1bb;
-
+@main-color: #63d1bb;
 @border: 1px solid #ececec;
 
+@width-table: 768px;
+@width-desctop: 1150px;

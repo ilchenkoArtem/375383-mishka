@@ -5,10 +5,20 @@
     text-transform: uppercase;
     color: @base-color-text;
     box-sizing: border-box;
-    border: 2px solid #000;
+    border: 2px solid #444444;
     background-color: transparent;
     text-decoration: none;
     min-height: 52px;
     width: 100%;
     .font(17px; 20px; bold);
+    transition: all 0.3s ease;
+}
+
+.button:hover{
+    background-color: #444444;
+    color: #fff;
+}
+
+.button:active{
+    color: rgba(255, 255, 255, 0.3);
 }

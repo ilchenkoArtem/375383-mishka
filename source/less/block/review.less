@@ -1,32 +1,68 @@
-.review{
+.review {
+    max-width: 1150px;
+    margin: 0 auto;
     box-sizing: border-box;
     padding: 30px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 0px;
+    margin-bottom: 56px;
+
 }
-.review h2{
+
+.review h2 {
     .caption;
+    margin-top: 9px;
+    margin-bottom: 24px;
+
 }
-.review__items{
+
+.review__items {
     display: flex;
     flex-direction: column;
 }
-.review__items blockquate{
+
+.review__text {
     line-height: 30px;
+    margin-bottom: 26px;
+
 }
 
-.review__items cite{
-    .font(17px; 24px; bold);
+.review__autor cite {
+    .font(17px;
+    24px;
+    bold);
     color: #000;
     font-style: normal;
 }
 
-.review__items address{
+.review__autor p {
+    .font(17px;
+    30px;
+    );
+    font-style: normal;
+    margin-top: 3px;
+    margin-bottom: 30px;
+
+
+}
+
+.review__container-button {
+    order: 1;
+}
+
+.review__items address {
     line-height: 30px;
     font-style: normal;
 }
-.review__control{
+
+.review__control {
     display: flex;
+    margin-bottom: 38px;
+
 }
-.review__control-button{
+
+.review__control-button {
     width: 100%;
     min-height: 52px;
     background-color: transparent;
@@ -36,14 +72,64 @@
     background-position: center;
     vertical-align: middle;
     box-sizing: border-box;
-    
-    &--right{
+
+    &--right {
         transform: rotate(180deg);
         border-right: none;
     }
 }
 
 
+@media (min-width: @width-table) {
+    .review {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-content: space-between;
+        padding: 86px 50px;
+        background-image: url(../img/review@1x.jpg);
+        background-repeat: no-repeat;
+        background-position: center left;
+    }
+    .review__container {
+        display: flex;
+        justify-content: space-between;
+    }
 
+    .review__container-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
+    .review__control-button {
+        border: none;
+        min-width: 70px;
+        padding: 0;
 
+    }
+
+    .review__container-button {
+        width: 175px;
+        order: 0;
+    }
+
+    .review h2 {
+        .font(43px;
+        50px;
+        bold);
+        width: 50%;
+        text-align: left;
+    }
+    .review__text {
+        margin-bottom: 70px;
+    }
+}
+
+@media (min-width: @width-desctop) {
+    .review-container {
+        padding: 50px;
+        width: 1150px;
+        margin: 0 auto;
+    }
+}

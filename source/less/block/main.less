@@ -1,14 +1,51 @@
-.main__caption{
+.main__caption {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 177px;
     background-color: #f1f1f1;
+
+}
+
+.main__caption h1 {
     color: #000;
+    font-size: 27px;
+    line-height: 30px;
+    margin-top: 10px;
 }
 
-.main__text-form{
-    .font(13px; 24px;);
-    padding: 0 30px;
+.main__text-form {
+    .font(13px;
+    24px;
+    );
+    padding: 9px 30px;
+
 }
 
+@media (min-width: @width-table) {
+    .main__caption {
+        height: 232px;
+        margin-bottom: 71px;
+
+    }
+
+    .main__caption h1 {
+        margin-top: 33px;
+    }
+
+    .main__text-form {
+        .font(17px;
+        30px;
+        );
+        padding: 0px 50px;
+    }
+}
+
+@media (min-width: @width-desctop) {
+    .main__text-form {
+        max-width: 1150px;
+        margin: 0 auto;
+        padding: 0 225px;
+        box-sizing: border-box;
+    }
+}

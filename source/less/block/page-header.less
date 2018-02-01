@@ -1,26 +1,19 @@
 .page-header {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 79px;
-    width: 320px;
-    background-color: #ffffff;
-    box-sizing: border-box;
-    border-bottom: @border;
-    margin-bottom: 323px;
-    
 }
 
- .page-header__button {
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        margin-right: 31px;
-        width: 20px;
-        height: 14px;
-        background-color: transparent;
-        background-image: url(../img/icon-menu-open.svg);
-        border: none;
+@media (min-width: @width-table) {
+    .page-header {
+        min-width: 320px;
+        padding: 0 50px;
+        box-sizing: border-box;
+    }
+}
+
+@media (min-width: @width-desctop) {
+    .page-header {
+        max-width: 1150px;
+        box-sizing: border-box;
+        margin: 0 auto;
+    }
 }

@@ -1,23 +1,208 @@
-.best-selling-goods{
-    max-width: 320px;
-    padding: 30px;
+.best-selling-goods {
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
     box-sizing: border-box;
 }
-.best-selling-goods h2{
+
+.best-selling-goods h2 {
     .caption;
+    margin-bottom: 2px;
 }
 
-.best-selling-goods b{
-    .font(17px; 20px; bold);
-    text-transform: uppercase;
+.best-selling-goods__container-name {
+    margin-bottom: 7px;
+}
+
+.best-selling-goods b {
+    .font(17px;
+    20px;
+    bold);
+}
+
+.best-selling-goods__options {
+    display: flex;
+    width: 100%;
+    margin-bottom: 6px;
+}
+
+.best-selling-goods__options ul {
+    padding: 0;
+    list-style: none;
+
+}
+
+.best-selling-goods__options li {
+    border-bottom: @border;
+}
+
+.best-selling-goods__description {
+    margin-bottom: 10px;
+}
+
+.best-selling-goods__options-names li {
+    width: 97px;
+    padding-bottom: 8px;
+    margin-bottom: 7px;
+}
+
+.best-selling-goods__options-value li {
+    padding-bottom: 8px;
+    margin-bottom: 7px;
+}
+
+.best-selling-goods__options-value {
+    width: 100%;
+}
+
+.best-selling-goods__container-name > b {
     color: @main-color;
+    text-transform: uppercase;
 }
 
-b.best-selling-goods__price{
-    color: @base-color-text;
+.best-selling-goods__main-info {
+    display: flex;
+    flex-direction: column;
 }
 
-.best-selling-goods img{
+
+.best-selling-goods__wrapper-button {
+    text-align: center;
+
+}
+
+.best-selling-goods__button {
+    margin: 25px 0 18px 0;
+}
+
+.best-selling-goods img {
     background-color: #f1f1f1;
+    margin-bottom: 19px;
 }
 
+@media (min-width: @width-table) {
+    .best-selling-goods {
+        .padding-table;
+        width: 100%;
+    }
+    .best-selling-goods__container-name {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+        margin-bottom: 55px;
+
+
+    }
+
+    .best-selling-goods__container-name h2 {
+        .font(43px;
+        50px;
+        bold);
+        margin-left: -3px;
+
+    }
+    .best-selling-goods__container-name b {
+        line-height: 17px;
+        width: 72px;
+        max-width: auto;
+        text-align: center;
+        margin: 41px 27px 0 0;
+
+    }
+
+    .best-selling-goods__description {
+        margin: -8px 0 28px 0;
+        .font(17px;
+        30px;
+        );
+
+    }
+
+    .best-selling-goods img {
+        margin: 0;
+    }
+
+    .best-selling-goods__button {
+        margin: 0;
+        margin: -5px 0 0 -2px;
+        width: 102.7%;
+
+    }
+
+    .best-selling-goods b {
+        position: relative;
+        top: -38px;
+        .font(20px;
+        24px;
+        bold);
+    }
+    .best-selling-goods__goods-info {
+        padding-right: 50px;
+        width: 50%;
+        box-sizing: border-box;
+    }
+
+    .best-selling-goods__wrapper-button {
+        width: 50%;
+        text-align: center;
+        box-sizing: border-box;
+        padding-right: 50px;
+        margin-top: -80px;
+    }
+
+    .best-selling-goods__wrapper-img {
+        width: 50%;
+    }
+
+    .best-selling-goods__wrapper-img img {
+        width: 100%;
+    }
+
+
+    .best-selling-goods__main-info {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+}
+
+@media (min-width: @width-desctop) {
+    .best-selling-goods {
+        max-width: 1150px;
+        margin: 0 auto;
+    }
+    .best-selling-goods__container-name {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        z-index: 10;
+        padding: 0 50px;
+
+    }
+    .best-selling-goods__goods-info {
+        padding-top: 100px;
+        padding-left: 175px;
+        box-sizing: border-box;
+    }
+
+    .best-selling-goods__wrapper-button {
+        padding-left: 175px;
+    }
+    .best-selling-goods__container-name h2 {
+        .font(53px;
+        57px;
+        bold);
+    }
+    .best-selling-goods__container-name b {
+        display: flex;
+        margin-right: 50px;
+    }
+
+    .best-selling-goods__main-info {
+        margin-top: -100px;
+    }
+}
