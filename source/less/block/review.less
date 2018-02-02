@@ -13,30 +13,28 @@
 .review h2 {
     .caption;
     margin-top: 9px;
-    margin-bottom: 24px;
+    margin-bottom: 9px;
 
 }
 
-.review__items {
-    display: flex;
-    flex-direction: column;
-}
 
-.review__text {
+.review__text > p {
     line-height: 30px;
     margin-bottom: 26px;
 
 }
 
-.review__autor cite {
+.review__name-author {
     .font(17px;
     24px;
     bold);
     color: #000;
     font-style: normal;
+    margin-bottom: 0px;
+
 }
 
-.review__autor p {
+.review__email-author {
     .font(17px;
     30px;
     );
@@ -49,11 +47,6 @@
 
 .review__container-button {
     order: 1;
-}
-
-.review__items address {
-    line-height: 30px;
-    font-style: normal;
 }
 
 .review__control {
@@ -86,7 +79,7 @@
         justify-content: space-between;
         flex-wrap: wrap;
         align-content: space-between;
-        padding: 86px 50px;
+        padding: 86px 50px 32px 50px;
         background-image: url(../img/review@1x.jpg);
         background-repeat: no-repeat;
         background-position: center left;
@@ -94,6 +87,8 @@
     .review__container {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 74px;
+
     }
 
     .review__container-button {
@@ -119,17 +114,75 @@
         50px;
         bold);
         width: 50%;
-        text-align: left;
+        margin-left: -5px;
     }
+
+    .review__container-items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
     .review__text {
-        margin-bottom: 70px;
+        margin: 0;
+        margin-top: 23px;
+    }
+
+    .review__text > p {
+        margin-bottom: 58px;
+        letter-spacing: 1px;
+
+    }
+
+    .review__control {
+        margin: 0;
+        margin-top: -118px;
+        width: 175px;
+
+    }
+
+    .review__container-reviews {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .review__name-author {
+        letter-spacing: 0.7px;
     }
 }
 
+
+
 @media (min-width: @width-desctop) {
-    .review-container {
-        padding: 50px;
-        width: 1150px;
+    .review {
+        padding: 62px 0px 66px 179px;
+    }
+    .review__container {
+        padding: 0 50px;
+        width: 1054px;
         margin: 0 auto;
+        margin-bottom: 103px;
+
+
+    }
+
+    .review h2 {
+        .font(53px;
+        57px;
+        bold);
+    }
+
+    .review__button-send {
+        margin-top: 15px;
+        width: 175px;
+    }
+
+    .review__text > p {
+        padding-right: 83px;
+        margin-bottom: 42px;
+    }
+
+    .review__name-author {
+        letter-spacing: normal;
     }
 }
