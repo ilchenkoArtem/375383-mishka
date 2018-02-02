@@ -87,18 +87,20 @@
                 <div class="best-selling-goods__goods-info">
                     <p class="best-selling-goods__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.
                     </p>
-                    <div class="best-selling-goods__options">
-                        <ul class="best-selling-goods__options-names">
-                            <li>Цвет:</li>
-                            <li>Диаметр:</li>
-                            <li>Высота:</li>
-                        </ul>
-                        <ul class="best-selling-goods__options-value">
-                            <li>«Тиффани»/серый</li>
-                            <li>25 см</li>
-                            <li>15 см</li>
-                        </ul>
-                    </div>
+                    <table class="best-selling-goods__options" cellspacing="90px">
+                        <tr class="best-selling-goods__options-names">
+                            <td>Цвет:</td>
+                            <td class="best-selling-goods__options-value">«Тиффани»/серый</td>
+                        </tr>
+                        <tr class="best-selling-goods__options-names">
+                            <td>Диаметр:</td>
+                            <td class="best-selling-goods__options-value">25 см</td>
+                        </tr>
+                        <tr class="best-selling-goods__options-names">
+                            <td>Высота:</td>
+                            <td class="best-selling-goods__options-value">15 см</td>
+                        </tr>
+                    </table>
                 </div>
                 <div class="best-selling-goods__wrapper-img">
                     <picture>
@@ -126,41 +128,49 @@
         </section>
         <div class="review__container">
             <section class="review">
-                <h2>Отзывы:</h2>
+                <h2>Отзывы</h2>
                 <div class="review__container-button">
                     <button class="button review__button-send">Написать</button>
                 </div>
-                <div class="review__text">
-                    Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
+
+                <div class="review__container-items">
+                    <div class="review__container-reviews">
+                        <div class="review__text">
+                            <p>
+                                Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
+                            </p>
+                            <div class="review__author">
+                                <p class="review__name-author"> Анастасия Красильникова</p>
+                                <p class="review__email-author">@misssssiskras</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review__control">
+                        <button class="review__control-button review__control-button--left"></button>
+                        <button class="review__control-button review__control-button--right"></button>
+                    </div>
                 </div>
 
-                <div class="review__autor">
-                    <cite>Анастасия Красильникова</cite>
-                    <p>@misssssiskras</p>
-                </div>
-                <div class="review__control">
-                    <button class="review__control-button review__control-button--left"></button>
-                    <button class="review__control-button review__control-button--right"></button>
-                </div>
+
             </section>
         </div>
         <section class="contacts">
             <div class="contacts__container-info">
                 <h2>Контакты</h2>
                 <section class="contacts__info">
-                    <ul class="contacts__info-items contacts__info-items--email ">
-                        <li>e-mail:</li>
-                        <li class="contacts__email">info@mimimishkashop.ru</li>
-                    </ul>
-                    <ul class="contacts__info-items contacts__info-items--adress">
-                        <li>адресс:</li>
-                        <li>г. Санкт-Петербург, <br>ул. Большая Конюшенная, <br> д. 19/8, офис 101</li>
-                    </ul>
+                    <div class="contacts__info-items contacts__info-items--email ">
+                        <p>e-mail:</p>
+                        <p class="contactts__email">info@mimimishkashop.ru</p>
+                    </div>
+                    <div class="contacts__info-items contacts__info-items--adress">
+                        <p>адрес:</p>
+                        <p>г. Санкт-Петербург, <br>ул. Большая Конюшенная, <br> д. 19/8, офис 101</p>
+                    </div>
                 </section>
             </div>
             <section class="contacts__info-map"></section>
             <div class="contacts__button-container">
-                <button class="button contacts__button">Напишите нам</button>
+                <button type="button" class="button contacts__button">Напишите нам</button>
             </div>
         </section>
 
