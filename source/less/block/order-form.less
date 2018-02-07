@@ -97,11 +97,6 @@
     transition: all 0.3s ease;
 }
 
-
-
-
-
-
 .order-form__type-item label::after {
     content: '';
     position: absolute;
@@ -117,14 +112,13 @@
     transition: all 0.3s ease;
 }
 
-
-
-
+label[for="Accessory"]::after,
+label[for="Accessory"]::before {
+    top: 14px;
+}
 
 input[name="type"]:checked + label::after {
     opacity: 1;
-
-
 }
 
 .order-form__colors-wrapper {
@@ -180,7 +174,6 @@ input[name="type"]:checked + label::after {
 
 input[name="color"]:checked + label::after {
     opacity: 1;
-
 
 }
 
@@ -260,7 +253,7 @@ input[name="color"]:checked + label::after {
 .order-form__container-button {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 }
 
@@ -280,6 +273,7 @@ input[name="color"]:checked + label::after {
 }
 
 
+
 .order-form__colors-wrapper input:disabled + label::before {
     border-color: rgba(132, 132, 132, 0.3);
 }
@@ -287,16 +281,21 @@ input[name="color"]:checked + label::after {
 .order-form__email-wrapper,
 .order-form__number-wrapper {
     position: relative;
+    margin-bottom: 8px;
+
 }
 
 .order-form__email-wrapper svg,
 .order-form__number-wrapper svg {
     fill: rgba(0, 0, 0, 0.2);
     position: absolute;
-    right: 0px;
-    top: 50%;
-    transform: translateY(-50%);
+    right: 4px;
+    top: 11px;
     transition: all 0.3s ease;
+}
+
+.order-form__number-wrapper svg {
+    right: 8px;
 }
 
 .order-form__email-wrapper input:hover + svg,
@@ -308,10 +307,8 @@ input[name="color"]:checked + label::after {
 }
 
 @media (min-width: @width-table) {
-    .main__caption h1 {
-        .font(43px;
-        50px;
-        bold);
+    .order-form {
+        margin-bottom: 33px;
     }
     .order-form h2 {
         margin: auto;
@@ -454,7 +451,7 @@ input[name="color"]:checked + label::after {
         display: flex;
         flex-direction: row;
         padding: 35px 50px;
-        padding-bottom: 14px;
+        padding-bottom: 16px;
     }
 
     .order-form__info-user {
@@ -507,7 +504,7 @@ input[name="color"]:checked + label::after {
         margin: 0 auto;
         background-color: #f1f1f1;
         padding: 53px 0px;
-        padding-bottom: 41px;
+        padding-bottom: 34px;
     }
 
     .order-form__container-contacts h2 {
@@ -555,22 +552,30 @@ input[name="color"]:checked + label::after {
     .order-form__button {
         width: 230px;
     }
+
+
+    label[for="Accessory"]::after,
+    label[for="Accessory"]::before {
+        top: 50%;
+    }
+
+    .order-form__number {
+        margin-bottom: 15px;
+    }
+
+    .order-form__email-wrapper svg {
+        right: 22px;
+    }
+    .order-form__number-wrapper svg {
+        right: 26px;
+
+    }
 }
 
 
 @media (min-width: @width-desctop) {
     .order-form__types-wrapper {
         width: auto;
-    }
-
-    .main__caption {
-        height: 250px;
-        margin-bottom: 124px;
-    }
-    .main__caption h1 {
-        .font(53px;
-        57px;
-        bold);
     }
 
     .order-form__container-name {
@@ -581,6 +586,10 @@ input[name="color"]:checked + label::after {
 
     .order-form__container-name h2 {
         width: 175px;
+    }
+
+    .order-form__number {
+        margin-bottom: 16px;
     }
 
     .order-form__types {
@@ -621,7 +630,7 @@ input[name="color"]:checked + label::after {
 
     .order-form__container-contacts {
         padding-top: 50px;
-        padding-bottom: 50px;
+        padding-bottom: 43px;
     }
     .order-form__container-contacts > div {
         max-width: 1150px;
@@ -638,5 +647,24 @@ input[name="color"]:checked + label::after {
         padding-right: 225px;
         box-sizing: border-box;
         margin-top: 13px;
+    }
+    .order-form__email-wrapper svg {
+        right: 22px;
+    }
+    .order-form__number-wrapper svg {
+        right: 26px;
+
+    }
+    .order-form__container-button > p {
+        margin-top: 11px;
+    }
+    .order-form {
+        margin-bottom: 29px;
+    }
+    .order-form__email-wrapper svg {
+        right: 4px;
+    }
+    .order-form__number-wrapper svg {
+        right: 8px;
     }
 }

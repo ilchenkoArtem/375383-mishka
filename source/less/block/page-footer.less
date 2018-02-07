@@ -3,6 +3,7 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding-left: 30px;
     padding-right: 30px;
     background-color: #f1f1f1;
@@ -11,21 +12,31 @@
 
 .page-footer__container-social {
     box-sizing: border-box;
-    border-bottom: @border;
     height: 50%;
-    justify-content: space-around;
     padding: 0;
     list-style: none;
-    width: auto;
     display: flex;
+    width: auto;
+    justify-content: space-around;
     align-items: center;
+    margin-left: -5px;
+    margin-top: 18px;
+    margin-bottom: 9px;
 }
 
 .page-footer__author {
     display: flex;
-    align-items: center;
     justify-content: center;
-    height: 50%
+    height: 50%;
+    padding-top: 25px;
+    border-top: @border;
+    width: 100%;
+
+}
+
+
+.page-footer__author:active {
+    opacity: 0.3;
 }
 
 .page-footer__author h2 {
@@ -34,40 +45,36 @@
     bold);
     color: #000;
     margin: 0;
+    margin-right: 30px;
 }
 
 .page-footer__author img {
-    fill: @main-color;
+    margin-top: -5px;
+
 }
 
 .page-footer__container > a {
     display: none;
 }
 
-.page-footer__container-social {
-    padding: 0;
-    list-style: none;
-    width: auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
 
-.page-footer__social li:not(:last-of-type){
+.page-footer__container-social li:not(:nth-child(3n)) {
     margin-right: 40px;
+
+
 }
 
-.page-footer__social a {
+.page-footer__container-social a {
     text-decoration: none;
 }
 
+
 @media (min-width: @width-table) {
-    .page-footer{
+    .page-footer {
         width: 100%;
         background-color: #f1f1f1
-        
     }
-    .page-footer__container{
+    .page-footer__container {
         box-sizing: border-box;
         padding: 0 50px;
         flex-direction: row;
@@ -77,11 +84,21 @@
     .page-footer__container > a {
         display: block;
     }
-    
-    .page-footer__container-social{
+
+    .page-footer__container-social {
         display: flex;
         justify-content: space-between;
         width: 141px;
-        transform: translateX(25%);
+        margin-top: 2px;
+        height: auto;
+        margin-left: 78px;
+
     }
+
+    .page-footer__author {
+        height: auto;
+        padding-top: 0;
+        width: auto;
+    }
+
 }
