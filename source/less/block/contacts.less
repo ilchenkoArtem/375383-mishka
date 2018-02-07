@@ -60,7 +60,11 @@
     background-size: 100%;
     margin: 0 auto;
     margin-bottom: 10px;
+    @media(min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url(../img/map-mobile@2x.jpg);
+        background-size: 100% auto;
 
+    }
 }
 
 .contacts__info-map::before {
@@ -85,7 +89,26 @@
     letter-spacing: 1px;
 }
 
+.contactts__email {
+    border-bottom: @border;
+    border-color: @main-color;
+    transition: all 0.3s ease;
+    &:hover {
+        color: @main-color;
+    }
+    &:focus,
+    &:active {
+        opacity: 0.3;
+    }
+}
+
 @media (min-width: @width-table) {
+    .contacts__info-map {
+        background-image: url(../img/map-tablet@1x.jpg);
+        @media(min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+            background-image: url(../img/map-tablet@2x.jpg);
+        }
+    }
     .contacts__info {
         flex-direction: row;
         margin-bottom: 39px;
@@ -157,9 +180,13 @@
         background-size: 100%;
         background-repeat: no-repeat;
     }
+    p.contactts__email {
+        height: 28px;
+    }
 }
 
 @media (min-width: @width-desctop) {
+
     .contacts {
         display: flex;
         width: 1050px;
@@ -188,7 +215,12 @@
     .contacts__info-map {
         margin: 0;
         width: 50%;
+        background-image: url(../img/map-desktop@1x.jpg);
+        @media(min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+            background-image: url(../img/map-desktop@2x.jpg);
+        }
     }
+
 
     .contacts h2 {
         font-size: 53px;
