@@ -7,7 +7,19 @@
     flex-direction: column;
     padding-top: 0px;
     margin-bottom: 56px;
-
+    position: relative;
+    &::after {
+        content: "";
+        width: 100%;
+        height: 6px;
+        background-image: url(../img/bg-zigzag-line.svg);
+        background-repeat: repeat-x;
+        background-position: center;
+        background-size: contain;
+        position: absolute;
+        bottom: -22px;
+        left: 0;
+    }
 }
 
 .review h2 {
@@ -16,6 +28,8 @@
     margin-bottom: 9px;
 
 }
+
+
 
 
 .review__text > p {
@@ -65,13 +79,22 @@
     background-position: center;
     vertical-align: middle;
     box-sizing: border-box;
+    outline: none;
+    transition: all 0.3s ease;
 
     &--right {
-        transform: rotate(180deg);
-        border-right: none;
+        background-image: url(../img/icon-right-arrow.svg);
+        border-left: none;
+    }
+
+    &:hover {
+        opacity: 0.6;
+    }
+    &:active,
+    &:focus {
+        opacity: 0.3;
     }
 }
-
 
 @media (min-width: @width-table) {
     .review {
@@ -83,14 +106,16 @@
         background-image: url(../img/review@1x.jpg);
         background-repeat: no-repeat;
         background-position: center left;
+        &::after {
+            height: 17px;
+            bottom: -69px;
+        }
+        @media(min-resolution: @retina-dpi),
+        (min-resolution: @retina-dppx) {
+            background-image: url(../img/review@2x.jpg);
+            background-size: 350px auto;
+        }
     }
-    .review__container {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 74px;
-
-    }
-
     .review__container-button {
         display: flex;
         justify-content: center;
@@ -125,12 +150,12 @@
 
     .review__text {
         margin: 0;
-        margin-top: 23px;
+        margin-top: 17px;
     }
 
     .review__text > p {
         margin-bottom: 58px;
-        letter-spacing: 1px;
+        font-size: 17px;
 
     }
 
@@ -144,6 +169,7 @@
     .review__container-reviews {
         display: flex;
         flex-direction: column;
+        width: 100%;
     }
 
     .review__name-author {
@@ -156,14 +182,10 @@
 @media (min-width: @width-desctop) {
     .review {
         padding: 62px 0px 66px 179px;
-    }
-    .review__container {
-        padding: 0 50px;
-        width: 1054px;
-        margin: 0 auto;
-        margin-bottom: 103px;
-
-
+        &::after {
+            height: 24px;
+            bottom: -90px;
+        }
     }
 
     .review h2 {
@@ -179,7 +201,9 @@
 
     .review__text > p {
         padding-right: 83px;
-        margin-bottom: 42px;
+        margin-bottom: 39px;
+        margin-top: 23px;
+
     }
 
     .review__name-author {
