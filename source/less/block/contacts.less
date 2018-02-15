@@ -57,6 +57,7 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 100%;
+    background-color: #f5ead8;
     margin: 0 auto;
     margin-bottom: 10px;
     @media(min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
@@ -66,7 +67,7 @@
     }
 }
 
-.contacts__info-map::before {
+.contacts__pointer {
     content: "";
     top: 32%;
     left: 43%;
@@ -100,10 +101,15 @@
     &:active {
         opacity: 0.3;
     }
+}
 
-    .contacts__info-map > iframe {
-        z-index: 2;
-        border: 0;
+.contacts__map-iframe {
+
+    z-index: 5;
+    border: none;
+    width: 100%;
+    &--nojs {
+        display: none;
     }
 }
 
@@ -166,7 +172,7 @@
 
     }
 
-    .contacts__info-map::before {
+    .contacts__pointer {
         top: 30.7%;
         left: 47.1%
     }
@@ -240,7 +246,7 @@
         height: 457px;
         margin-left: 18px;
     }
-    .contacts__info-map::before {
+    .contacts__pointer {
         top: 32.7%;
         left: 45.1%;
     }

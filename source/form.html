@@ -16,7 +16,7 @@
             <div class="header-nav__wrapper-lists">
                 <div class="header-nav__logo">
                     <button class="header-nav__button header-nav__button--closed header-nav__button--nojs"></button>
-                    <a href="index.html">
+                    <a href="index.html" aria-label="переход на гланвую страницу">
                         <picture>
                             <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
                             <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
@@ -134,15 +134,15 @@
                 <ul class="order-form__names-wrapper">
                     <li class="order-form__info-user order-form__name">
                         <label for="name">Имя:</label>
-                        <input type="text" id="name" placeholder="Введите ваше имя*" name="name" required>
+                        <input type="text" id="name" placeholder="Введите ваше имя*" name="name" aria-label="введите ваше имя" required>
                     </li>
                     <li class="order-form__info-user order-form__surname">
                         <label for="surname">Фамилия:</label>
-                        <input type="text" id="surname" name="surname" placeholder="Укажите фамилию*" required>
+                        <input type="text" id="surname" name="surname" placeholder="Укажите фамилию*" aria-label="Введите вашу фамилию" required>
                     </li>
                     <li class="order-form__info-user order-form__middle-name">
                         <label for="middle_name">Отчество:</label>
-                        <input type="text" id="middle_name" name="middle_name" placeholder="Отчество, если желаете">
+                        <input type="text" id="middle_name" aria-label="Введите ваше отчество если желаете" name="middle_name" placeholder="Отчество, если желаете">
                     </li>
                 </ul>
             </section>
@@ -154,7 +154,7 @@
                             <span class="order-form__delimiter"></span>
                         </div>
                         <div class="order-form__number-wrapper">
-                            <input type="tel" placeholder="+7 ХХХ ХХ ХХ*" name="phone_number" required>
+                            <input type="tel" placeholder="+7 ХХХ ХХ ХХ*" name="phone_number" aria-label="Введите ваш номер телефона" required>
                             <svg width="25" height="24"><use xlink:href="img/sprite.svg#icon-phone"></use></svg>
                         </div>
                     </section>
@@ -165,7 +165,7 @@
                             <span class="order-form__delimiter"></span>
                         </div>
                         <div class="order-form__email-wrapper">
-                            <input type="email" placeholder="Ваш Email*" name="email" required>
+                            <input type="email" placeholder="Ваш Email*" name="email" aria-label="Введите ваш email" required>
                             <svg width="32" height="32"><use xlink:href="img/sprite.svg#icon-mail"></use></svg>
                         </div>
                     </section>
@@ -177,7 +177,7 @@
                     <span class="order-form__delimiter"></span>
                 </div>
                 <div class="order-form__text-wrapper">
-                    <textarea name="text" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+                    <textarea name="text" placeholder="Опишите все ваши пожелания к заказу" aria-label="Ваши пожелания к заказу"></textarea>
                 </div>
             </section>
             <div class="order-form__container-button">
@@ -188,7 +188,7 @@
     </main>
     <footer class="page-footer">
         <div class="page-footer__container">
-            <a href="index.html">
+            <a href="index.html" aria-label="переход на гланвую страницу">
                 <svg width="102" height="34"><use xlink:href="img/sprite.svg#logo-footer"></use></svg>
             </a>
             <ul class="page-footer__container-social">
@@ -216,6 +216,7 @@
             </section>
         </div>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

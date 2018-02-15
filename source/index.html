@@ -114,7 +114,7 @@
                 </div>
                 <div class="best-selling-goods__wrapper-button">
                     <b class="best-selling-goods__price">Цена: 990 руб.</b>
-                    <a href="#" class="button best-selling-goods__button">Заказать</a>
+                    <a href="#" class="button best-selling-goods__button" aria-label="Вызывает попап формы заказа">Заказать</a>
                 </div>
             </div>
         </section>
@@ -122,10 +122,10 @@
             <h2>Коротко о нас:</h2>
             <ul class="about-us__lists">
                 <li class="about-us__item about-us__item--eco">Экологически<br>чистые материалы</li>
-                <li class="about-us__item about-us__item--style">Скандинавский стиль<br>по российской цене</li>
-                <li class="about-us__item about-us__item--like">Увеличивает лайки<br>на фотографиях</li>
                 <li class="about-us__item about-us__item--heand-made">Связано вручную с<br> любовью и умилением</li>
+                <li class="about-us__item about-us__item--style">Скандинавский стиль<br>по российской цене</li>
                 <li class="about-us__item about-us__item--support">Поддержка отечественного<br> производителя</li>
+                <li class="about-us__item about-us__item--like">Увеличивает лайки<br>на фотографиях</li>
                 <li class="about-us__item about-us__item--gift-wrap">Поставляется в<br> подарочной упаковке</li>
             </ul>
         </section>
@@ -133,7 +133,7 @@
             <section class="review">
                 <h2>Отзывы</h2>
                 <div class="review__container-button">
-                    <button class="button review__button-send">Написать</button>
+                    <button class="button review__button-send" aria-label="Вызывает попап формы отзыва">Написать</button>
                 </div>
 
                 <div class="review__container-items">
@@ -149,8 +149,8 @@
                         </div>
                     </div>
                     <div class="review__control">
-                        <button class="review__control-button review__control-button--left"></button>
-                        <button class="review__control-button review__control-button--right"></button>
+                        <button class="review__control-button review__control-button--left" aria-label="предыдущий отзыв"></button>
+                        <button class="review__control-button review__control-button--right" aria-label="следующий отзыв"></button>
                     </div>
                 </div>
             </section>
@@ -170,10 +170,12 @@
                 </section>
             </div>
             <section class="contacts__info-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651663!2d30.320894616001887!3d59.938794181876204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xfbeb3cbd3eed50c8!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCAxMDEsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sua!4v1518405784857" width="100%" height="457px" frameborder="0" allowfullscreen></iframe>
+                <span class="contacts__pointer"></span>
+                <iframe class="contacts__map-iframe contacts__map-iframe--nojs
+                " src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651663!2d30.320894616001887!3d59.938794181876204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xfbeb3cbd3eed50c8!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCAxMDEsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sua!4v1518405784857" height="457" allowfullscreen></iframe>
             </section>
             <div class="contacts__button-container">
-                <button type="button" class="button contacts__button">Напишите нам</button>
+                <button type="button" class="button contacts__button" aria-label="Вызывает попап формы отзыва">Напишите нам</button>
             </div>
         </section>
 
@@ -185,58 +187,50 @@
             </a>
             <ul class="page-footer__container-social">
                 <li>
-                    <a href="https://www.instagram.com/htmlacademy/">
+                    <a href="https://www.instagram.com/htmlacademy/" aria-label="открытие нового окна переход к инстаграм аккаунту" target="_blank">
                        <svg width="22" height="22"><use xlink:href="img/sprite.svg#icon-insta"></use></svg>
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.facebook.com/htmlacademy">
+                    <a href="https://www.facebook.com/htmlacademy" aria-label="открытие нового окна переход к фейсбук аккаунту" target="_blank" .>
                         <svg width="15" height="28"><use xlink:href="img/sprite.svg#icon-fb"></use></svg>
                     </a>
                 </li>
                 <li>
-                    <a href="https://twitter.com/htmlacademy_ru">
+                    <a href="https://twitter.com/htmlacademy_ru" aria-label="открытие нового окна переход к твитер аккаунту" target="_blank" .>
                          <svg width="24" height="20"><use xlink:href="img/sprite.svg#icon-twitter"></use></svg>
                     </a>
                 </li>
             </ul>
             <section class="page-footer__author">
-                <a href="https://htmlacademy.ru/intensive/adaptive">
+                <a href="https://htmlacademy.ru/intensive/adaptive" aria-label="открытие нового окна переход на страницу разрабочика" target="_blank" .>
                     <h2>Разработано</h2>
                     <img src="img/logo-htmlacademy.svg" alt="htmlacademy" width="27" height="34">
                 </a>
             </section>
         </div>
     </footer>
-    <script>
-        var closed = document.querySelector(".header-nav__button--closed");
-        var open = document.querySelector(".header-nav__button--open");
-        var button = document.querySelector(".header-nav__button");
-        var firstMain = document.querySelector(".header-nav__wrapper-bottom--nojs");
-        var secondMain = document.querySelector(".header-nav__container");
-        button.classList.remove("header-nav__button--nojs");
-        firstMain.classList.remove("header-nav__wrapper-bottom--nojs");
-        secondMain.classList.remove("header-nav__container--nojs");
-
-        button.addEventListener("click", function() {
-            if (button.classList.contains("header-nav__button--closed")) {
-                button.classList.remove("header-nav__button--closed")
-                button.classList.add("header-nav__button--open")
-                firstMain.classList.remove("header-nav__wrapper-bottom--closed")
-                firstMain.classList.add("header-nav__wrapper-bottom--open")
-                secondMain.classList.remove("header-nav__container--closed")
-                secondMain.classList.add("header-nav__container--open")
-            } else {
-                button.classList.remove("header-nav__button--open")
-                button.classList.add("header-nav__button--closed")
-                firstMain.classList.remove("header-nav__wrapper-bottom--open")
-                firstMain.classList.add("header-nav__wrapper-bottom--closed")
-                secondMain.classList.remove("header-nav__container--open")
-                secondMain.classList.add("header-nav__container--closed")
-            }
-        })
-
-    </script>
+    <section class="modal-popup modal-popup--open modal-popup--close">
+        <div class="modal-popup__overley"></div>
+        <div class="modal-popup__container">
+            <h2>добавить<br> в корзину</h2>
+            <p>Выберите размер:</p>
+            <form action="https://echo.htmlacademy.ru" class="modal-popup__form">
+                <div class="modal-popup__size-container">
+                    <input type="radio" class="visually-hidden" name="size" value="S" id="S" checked>
+                    <label for="S">S</label>
+                    <input type="radio " class="visually-hidden" name="size" value="M" id="M">
+                    <label for="M">M</label>
+                    <input type="radio" class="visually-hidden" name="size" value="L" id="L">
+                    <label for="L">L</label>
+                </div>
+                <div class="modal-popup__form-button">
+                    <button class="button modal-popup__button">ДОБАВИТЬ</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <script src="js/script.js "></script>
 </body>
 
 </html>

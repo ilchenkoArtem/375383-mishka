@@ -1,0 +1,131 @@
+.modal-popup {
+    &--open {
+        display: block;
+        z-index: 999px;
+    }
+    &--close {
+        display: none;
+    }
+
+
+}
+
+.modal-popup__overley {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    top: 0;
+    z-index: 20;
+    &--open {
+        display: block;
+    }
+    &--close {
+        display: none;
+    }
+}
+
+.modal-popup__container {
+    padding: 0 30px;
+    padding-bottom: 46px;
+    border-top: @border;
+    border-bottom: @border;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    box-sizing: border-box;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    box-shadow: 0 7px 15px 0px rgba(0, 0, 0, 0.3);
+    z-index: 30;
+}
+
+.modal-popup__container h2 {
+    .font(25px;
+    30px;
+    bold;
+    );
+    text-transform: uppercase;
+    margin-top: 30px;
+    margin-bottom: 0px;
+}
+
+.modal-popup__container p {
+    line-height: 30px;
+    margin-top: 12px;
+    margin-bottom: 23px;
+}
+
+.modal-popup__size-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 31px;
+}
+
+.modal-popup__size-container label {
+    width: 100%;
+    height: 52px;
+    border: @border;
+    border-width: 2px;
+    .font(17px;
+    52px;
+    bold;
+    );
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.modal-popup__size-container label:hover {
+    border-color: #c7c7c7;
+
+}
+
+input[name="size"]:checked + label {
+    border-color: @main-color;
+
+}
+
+
+
+.modal-popup__size-container label:not(:last-of-type) {
+    margin-right: 7px;
+}
+
+.modal-popup__button {
+    border: none;
+    background-color: @main-color;
+    color: #fff;
+}
+
+@media (min-width: @width-table) {
+    .modal-popup__container {
+        width: 566px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 0 106px;
+        padding-bottom: 46px;
+        border-top: @border;
+        box-sizing: border-box;
+    }
+
+    .modal-popup__container br {
+        display: none;
+    }
+
+    .modal-popup__container h2 {
+        .font(30px;
+        57px;
+        bold;
+        );
+        margin-top: 42px;
+        margin-bottom: 0px;
+
+    }
+    .modal-popup__container p {
+        font-size: 17px;
+        margin-bottom: 20px;
+    }
+}
