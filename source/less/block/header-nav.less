@@ -11,18 +11,6 @@
 
 }
 
-.header-nav__button {
-    position: absolute;
-    top: 50%;
-    right: 30px;
-    width: 21px;
-    height: 20px;
-    transform: translateY(-50%);
-    background-color: transparent;
-    background-image: url(../img/icon-menu-close.svg);
-    background-repeat: no-repeat;
-    border: none;
-}
 
 .header-nav__wrapper-lists {
     display: flex;
@@ -69,6 +57,7 @@
 
 
         }
+
     }
 }
 
@@ -98,9 +87,11 @@
     transition: opacity 0.3s ease;
 }
 
+
 .header-nav__logo > a {
     justify-content: center;
     padding: 0px;
+    width: auto;
 }
 
 .header-nav a[href]:hover {
@@ -116,12 +107,66 @@
     border-bottom: @border;
 }
 
+li.header-nav__item--basket {
+    border-bottom: none;
+}
+
+.header-nav__list--main-menu li:first-of-type {
+    border-top: @border;
+}
+
 .header-nav__list-delivery {
     display: none;
 }
 
 .header-nav__logo img {
     margin-top: 4px;
+}
+
+@media (max-width: 767px) {
+
+
+    .header-nav__wrapper-bottom--closed,
+    .header-nav__container--closed {
+        display: none;
+    }
+
+    .header-nav__container--nojs,
+    .header-nav__wrapper-bottom--nojs,
+    .header-nav__wrapper-open,
+    .header-nav__container--open {
+        display: block;
+    }
+    .header-nav__button {
+        outline: none;
+        &--closed {
+            position: absolute;
+            top: 50%;
+            right: 30px;
+            width: 20px;
+            height: 14px;
+            transform: translateY(-50%);
+            background-color: transparent;
+            background-repeat: no-repeat;
+            border: none;
+            background-image: url(../img/icon-menu-open.svg)
+        }
+        &--open {
+            position: absolute;
+            top: 50%;
+            right: 30px;
+            width: 21px;
+            height: 20px;
+            transform: translateY(-50%);
+            background-color: transparent;
+            background-image: url(../img/icon-menu-close.svg);
+            background-repeat: no-repeat;
+            border: none;
+        }
+        &--nojs {
+            display: none;
+        }
+    }
 }
 
 @media (min-width: @width-table) {
