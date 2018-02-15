@@ -14,7 +14,7 @@
         <nav class="header-nav">
             <div class="header-nav__wrapper-lists">
                 <div class="header-nav__logo">
-                    <button class="header-nav__button"></button>
+                    <button class="header-nav__button header-nav__button--closed header-nav__button--nojs"></button>
                     <a href="index.html">
                         <picture>
                             <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
@@ -23,7 +23,7 @@
                         </picture>
                     </a>
                 </div>
-                <div class="header-nav__wrapper-bottom">
+                <div class="header-nav__wrapper-bottom header-nav__wrapper-bottom--closed header-nav__wrapper-bottom--nojs">
                     <ul class="header-nav__list header-nav__list--main-menu">
                         <li class="header-nav__item">
                             <a href="catalog.html">Каталог товаров</a>
@@ -42,7 +42,7 @@
                     </ul>
 
                 </div>
-                <div class="header-nav__container">
+                <div class="header-nav__container header-nav__container--closed header-nav__container--nojs">
                     <ul class="header-nav__list">
                         <li class="header-nav__item header-nav__item--search">
                             <a href="search.html">
@@ -53,7 +53,7 @@
                         <li class="header-nav__item header-nav__item--basket">
 
                             <a href="basket.html">
-                                <svg width="22" height="19"><use xlink:href="img/sprite.svg#icon-basket"></use></svg>
+                                <svg width="22" height="19"><use xlink:href="img/sprite.svg#icon-cart"></use></svg>
                                 <p>Корзина: пока пуста</p>
                             </a>
                         </li>
@@ -69,11 +69,11 @@
             <section class="our-products__type-goods">
                 <a href="#" class="our-products__type-interior">
                     <b>Предметы интерьера</b>
-                    <svg width="40" height="62"><use xlink:href="img/sprite.svg#icon-interier"></use></svg>
+                    <svg width="40" height="62"><use xlink:href="img/sprite.svg#icon-interior"></use></svg>
                 </a>
                 <a href="#" class="our-products__type-toys">
                    <b>Детские игрушки</b>
-                   <svg width="60" height="60"><use xlink:href="img/sprite.svg#icon-toys"></use></svg>
+                   <svg width="60" height="60"><use xlink:href="img/sprite.svg#icon-toy"></use></svg>
                 </a>
             </section>
         </section>
@@ -104,12 +104,12 @@
                 </div>
                 <div class="best-selling-goods__wrapper-img">
                     <picture>
-                        <source type="image/webp" media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x_webp.webp 1x, img/triple-set-desktop@2x_webp.webp 2x">
-                        <source type="image/webp" media="(min-width: 768px)" srcset="img/triple-set-tablet@1x_webp.webp 1x,img/triple-set-tablet@2x_webp.webp 2x">
-                        <source type="image/webp" srcset="img/triple-set-mobile@1x_webp.webp 1x,img/triple-set-mobile@2x_webp.webp 2x">
-                        <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
-                        <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
-                        <img src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязаные картинки" width="260">
+                        <source type="image/webp" media="(min-width: 1150px)" srcset="img/content/triple-set-desktop@1x.webp 1x, img/content/triple-set-desktop@2x.webp 2x">
+                        <source type="image/webp" media="(min-width: 768px)" srcset="img/content/triple-set-tablet@1x.webp 1x,img/content/triple-set-tablet@2x.webp 2x">
+                        <source type="image/webp" srcset="img/content/triple-set-mobile@1x.webp 1x,img/content/triple-set-mobile@2x.webp 2x">
+                        <source media="(min-width: 1150px)" srcset="img/content/triple-set-desktop@1x.jpg 1x, img/content/triple-set-desktop@2x.jpg 2x">
+                        <source media="(min-width: 768px)" srcset="img/content/triple-set-tablet@1x.jpg 1x, img/content/triple-set-tablet@2x.jpg 2x">
+                        <img src="img/content/triple-set-mobile@1x.jpg" srcset="img/content/triple-set-mobile@2x.jpg 2x" alt="Вязаные картинки" width="260">
                     </picture>
                 </div>
                 <div class="best-selling-goods__wrapper-button">
@@ -186,17 +186,17 @@
             <ul class="page-footer__container-social">
                 <li>
                     <a href="https://www.instagram.com/htmlacademy/">
-                       <svg width="22" height="22"><use xlink:href="img/sprite.svg#social-instagram"></use></svg>
+                       <svg width="22" height="22"><use xlink:href="img/sprite.svg#icon-insta"></use></svg>
                     </a>
                 </li>
                 <li>
                     <a href="https://www.facebook.com/htmlacademy">
-                        <svg width="15" height="28"><use xlink:href="img/sprite.svg#social-fc"></use></svg>
+                        <svg width="15" height="28"><use xlink:href="img/sprite.svg#icon-fb"></use></svg>
                     </a>
                 </li>
                 <li>
                     <a href="https://twitter.com/htmlacademy_ru">
-                         <svg width="24" height="20"><use xlink:href="img/sprite.svg#social-twitter"></use></svg>
+                         <svg width="24" height="20"><use xlink:href="img/sprite.svg#icon-twitter"></use></svg>
                     </a>
                 </li>
             </ul>
@@ -208,6 +208,35 @@
             </section>
         </div>
     </footer>
+    <script>
+        var closed = document.querySelector(".header-nav__button--closed");
+        var open = document.querySelector(".header-nav__button--open");
+        var button = document.querySelector(".header-nav__button");
+        var firstMain = document.querySelector(".header-nav__wrapper-bottom--nojs");
+        var secondMain = document.querySelector(".header-nav__container");
+        button.classList.remove("header-nav__button--nojs");
+        firstMain.classList.remove("header-nav__wrapper-bottom--nojs");
+        secondMain.classList.remove("header-nav__container--nojs");
+
+        button.addEventListener("click", function() {
+            if (button.classList.contains("header-nav__button--closed")) {
+                button.classList.remove("header-nav__button--closed")
+                button.classList.add("header-nav__button--open")
+                firstMain.classList.remove("header-nav__wrapper-bottom--closed")
+                firstMain.classList.add("header-nav__wrapper-bottom--open")
+                secondMain.classList.remove("header-nav__container--closed")
+                secondMain.classList.add("header-nav__container--open")
+            } else {
+                button.classList.remove("header-nav__button--open")
+                button.classList.add("header-nav__button--closed")
+                firstMain.classList.remove("header-nav__wrapper-bottom--open")
+                firstMain.classList.add("header-nav__wrapper-bottom--closed")
+                secondMain.classList.remove("header-nav__container--open")
+                secondMain.classList.add("header-nav__container--closed")
+            }
+        })
+
+    </script>
 </body>
 
 </html>
