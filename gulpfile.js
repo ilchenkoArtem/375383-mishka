@@ -18,16 +18,28 @@ var webp = require('gulp-webp');
 var jsmin = require("gulp-uglify");
 var pump =  require ('pump');
 
-gulp.task("style", function () {
-    gulp.src("source/less/style.less")
-        .pipe(plumber())
-        .pipe(less())
-        .pipe(postcss([
+//gulp.task("style", function () {
+//    gulp.src("source/less/style.less")
+//        .pipe(plumber())
+//        .pipe(less())
+//        .pipe(postcss([
+//      autoprefixer()
+//    ]))
+//        .pipe(gulp.dest("build/css"))
+//        .pipe(server.stream());
+//});
+
+gulp.task("style", function() {
+  gulp.src("source/less/style.less")
+    .pipe(plumber())
+    .pipe(less())
+    .pipe(postcss([
       autoprefixer()
     ]))
-        .pipe(gulp.dest("build/css"))
-        .pipe(server.stream());
+    .pipe(gulp.dest("source/css"))
+    .pipe(server.stream());
 });
+
 
 gulp.task("serve", function () {
     server.init({
