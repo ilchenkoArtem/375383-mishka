@@ -1,13 +1,12 @@
 .about-us {
   max-width: 1150px;
   padding: 30px;
-  padding-bottom: 0px;
+  padding-bottom: 0;
 }
 
 .about-us h2 {
   .caption;
   margin-bottom: 32px;
-
 }
 
 .about-us__lists {
@@ -18,16 +17,7 @@
   .font(17px;
   20px;
   bold);
-  color: #000;
-}
-
-.about-us__item {
-  position: relative;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-  height: 95px;
-  margin-bottom: 28px;
+  color: #000000;
 }
 
 .about-us__item::before {
@@ -41,6 +31,12 @@
 }
 
 .about-us__item {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  height: 95px;
+  margin-bottom: 28px;
   &--eco {
     order: 1;
     &::before {
@@ -69,7 +65,6 @@
       background-image: url(../img/icon-feature-heart.svg);
     }
   }
-
   &--heand-made {
     order: 4;
     &::before {
@@ -115,6 +110,7 @@
     margin-left: -5px;
     margin-bottom: 51px;
   }
+
   .about-us__lists {
     display: flex;
     flex-direction: row;
@@ -150,8 +146,6 @@
     margin: 0 auto;
     padding-left: 225px;
     padding-bottom: 28px;
-
-
   }
 
   .about-us h2 {
@@ -160,6 +154,7 @@
     bold);
     margin-bottom: 52px;
   }
+
   .about-us__lists li {
     width: 39%;
   }
