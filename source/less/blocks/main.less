@@ -25,12 +25,12 @@
 @media (min-width: @width-table) {
     .main__caption {
         height: 232px;
-        margin-bottom: 64px;
+        margin-bottom: 73px;
         position: relative;
         &::after {
             content: "";
             position: absolute;
-            bottom: 0px;
+            bottom: -1px;
             background-image: url(../img/bg-zigzag-fill.svg);
             background-repeat: repeat-x;
             width: 100%;
@@ -38,7 +38,6 @@
             left: 0;
 
         }
-
     }
 
     .main__caption h1 {
@@ -53,6 +52,8 @@
         30px;
         );
         padding: 0px 50px;
+        margin-top: -7px;
+
     }
 
     .main__review-container {
