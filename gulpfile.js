@@ -25,24 +25,24 @@ gulp.task("style", function() {
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(gulp.dest("source/css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
 });
 
-//gulp.task("serve", function () {
-//  server.init({
-//    server: "build/",
-//    notify: false,
-//    open: true,
-//    cors: true,
-//    ui: false
-//  });
-//
-//  gulp.watch("source/less/**/*.less", ["style"]);
-//  gulp.watch("source/*.html", ["html"]);
-//});
+gulp.task("serve", function () {
+  server.init({
+    server: "build/",
+    notify: false,
+    open: true,
+    cors: true,
+    ui: false
+  });
 
-gulp.task("serve", ["style"], function() {
+  gulp.watch("source/less/**/*.less", ["style"]);
+  gulp.watch("source/*.html", ["html"]);
+});
+
+gulp.task("servemain", ["style"], function() {
   server.init({
     server: "source/",
     notify: false,

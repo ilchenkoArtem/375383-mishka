@@ -148,9 +148,16 @@
     justify-content: space-between;
     flex-direction: column;
   }
+  
+  .catalog-items__main-price {
+    margin: 0 30px;
+  }
 }
 
 @media (min-width: @width-desctop) {
+  .catalog-items__main-price {
+    margin: 0;
+  }
   .catalog-items {
     width: 1150px;
     padding: 0 50px;
@@ -174,7 +181,8 @@
     display: flex;
     justify-content: flex-start;
     width: 100%;
-    margin: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .catalog-items__wrapper-info {
@@ -186,6 +194,7 @@
   .catalog-items__wrapper b {
     width: 100%;
     padding: 0;
+    margin-top: 18px;
   }
 
   .catalog-items__main-info,
