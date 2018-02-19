@@ -176,9 +176,9 @@
   }
 
   .production__items-wrapper {
-    height: 455px;
+    min-height: 455px;
     box-sizing: border-box;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
     align-content: flex-start;
@@ -217,6 +217,11 @@
     padding: 0;
     padding-top: 64px;
     margin-left: 0;
+    width: auto;
+    max-width: 330px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .production__items-wrapper h2::before {

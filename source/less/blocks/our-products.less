@@ -131,11 +131,10 @@
       bottom: -14px;
       background-image: url("../img/bg-zigzag-fill.svg");
       background-repeat: repeat-x;
-      background-position-x: -19px;
-      width: 100%;
+      background-position-x: center;
+      width: 92%;
       height: 24px;
       background-size: contain;
-      left: 0;
     }
   }
 
@@ -192,9 +191,13 @@
     background-image: url("../img/hero-desktop@1x.jpg");
 
     &::after {
-      bottom: -6px;
-      background-position-x: 1.5px;
+      height: 30px;
+      bottom: -16px;
+      background-position-x: center;
       background-size: auto;
+      transform: scaleX(1.09);
+      width: inherit;
+
     }
 
     @media (min-resolution: @retina-dpi),
